@@ -46,7 +46,8 @@ public class FirebaseCategoryProvider implements CategoryProvider {
 
         awaitLatch(latch);
 
-        return categoryAtomicRef.get().keySet().toArray(new String[]);
+        return categoryAtomicRef.get().keySet().toArray(new String[categoryAtomicRef.get().size()]);
+        //random
     }
 
 
